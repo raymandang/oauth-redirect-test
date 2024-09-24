@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn OAuth Callback</title>
+</head>
+<body>
+    <h1>LinkedIn OAuth Success</h1>
+    <p>If you're seeing this, you've been redirected successfully.</p>
+    <script>
+        // You can capture the query parameters (e.g., authorization code) here
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        console.log('Authorization Code:', code);
+
+        // Redirect the code to your server or display it
+        document.write(`<p>Authorization Code: ${code}</p>`);
+    </script>
+</body>
+</html>
